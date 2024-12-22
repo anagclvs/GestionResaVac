@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/GestionResaVac/src" modelPluginID="GestionResaVac"
+    modelName="GestionResaVac" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="22.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>GestionResaVac.ecore</foreignModel>
+  <genPackages prefix="GestionResaVac" disposableProviderFactory="true" ecorePackage="GestionResaVac.ecore#/">
+    <genClasses ecoreClass="GestionResaVac.ecore#//Utilisateur">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Utilisateur/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Utilisateur/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Utilisateur/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Utilisateur/motDePasse"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionResaVac.ecore#//Utilisateur/lesReservations"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionResaVac.ecore#//Reservation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Reservation/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Reservation/dateDebut"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Reservation/dateFin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Reservation/statut"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Reservation/montant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionResaVac.ecore#//Reservation/lesHebergements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionResaVac.ecore#//Reservation/lesActivites"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionResaVac.ecore#//Reservation/lesTransports"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionResaVac.ecore#//Reservation/lePaiement"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionResaVac.ecore#//Hebergement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Hebergement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Hebergement/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Hebergement/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Hebergement/localisation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Hebergement/prixParNuit"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionResaVac.ecore#//Activite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Activite/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Activite/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Activite/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Activite/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Activite/prix"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionResaVac.ecore#//Transport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Transport/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Transport/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Transport/compagnie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Transport/prix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Transport/horaire"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionResaVac.ecore#//Paiement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Paiement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Paiement/montant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Paiement/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionResaVac.ecore#//Paiement/methode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionResaVac.ecore#//Paiement/laReservation"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
